@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RoleTest < ActiveSupport::TestCase
   setup do
-    load "#{Rails.root}/db/seeds.rb"
+    load_seed_data
   end
 
   test 'available roles' do
