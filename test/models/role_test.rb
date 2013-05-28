@@ -11,7 +11,9 @@ class RoleTest < ActiveSupport::TestCase
     assert Role.find_by_name('Pupil'), 'Pupil role should exist'
   end
 
-  test 'can not have dublicate roles' do
-    Role.create! name: 'Organizer'
+  test 'can not have duplicate roles' do
+    assert_raises ActiveRecord::RecordInvalid do
+      Role.create! name: 'Organizer'
+    end
   end
 end

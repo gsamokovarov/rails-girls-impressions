@@ -1,3 +1,3 @@
 class Role < ActiveRecord::Base
-  validate :name, uniqueness: true
+  validates :name, uniqueness: true
 end
