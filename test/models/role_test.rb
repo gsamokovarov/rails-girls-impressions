@@ -6,9 +6,9 @@ class RoleTest < ActiveSupport::TestCase
   end
 
   test 'available roles' do
-    assert Role.find_by_name('Organizer'), 'Organizer role should exist'
-    assert Role.find_by_name('Coach'), 'Coach role should exist'
-    assert Role.find_by_name('Pupil'), 'Pupil role should exist'
+    assert Role.find_by(name: 'Organizer'), 'Organizer role should exist'
+    assert Role.find_by(name: 'Coach'), 'Coach role should exist'
+    assert Role.find_by(name: 'Pupil'), 'Pupil role should exist'
   end
 
   test 'can not have duplicate roles' do
